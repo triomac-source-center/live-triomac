@@ -1,8 +1,9 @@
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
-
 import '@/styles/tailwind.css'
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
+
 
 export const metadata = {
   title: {
@@ -27,7 +28,7 @@ const lexend = Lexend({
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{baseTheme: dark}}>
       <html
         lang="en"
         className={clsx(
