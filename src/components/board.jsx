@@ -48,7 +48,7 @@ export default function Board() {
     const fetchData = async () => {
 
       try {
-        const response = await fetch("http://localhost:8000/api/get");
+        const response = await fetch("https://live-server-triomac.onrender.com/api/get");
         const result = await response.json();
         setData(result);
       } catch (err) {
