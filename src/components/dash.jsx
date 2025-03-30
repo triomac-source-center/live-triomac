@@ -86,7 +86,7 @@ export default function Dashboard({ children }) {
                 <div className="flex h-16 shrink-0 items-center">
                   <img
                     alt="Your Company"
-                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                    src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg"
                     className="h-8 w-auto"
                   />
                 </div>
