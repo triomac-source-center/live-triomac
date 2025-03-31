@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           lexend.variable,
         )}
       >
-        <body className="flex h-full flex-col">
+        <body className="flex h-screen flex-col bg-gray-900">
           <ClerkLoading>
             <div className="fixed top-0 left-0 w-screen h-screen bg-white flex justify-center items-center">
               <p className="text-2xl font-bold text-gray-800">Loading...</p>

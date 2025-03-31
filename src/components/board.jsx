@@ -73,68 +73,71 @@ export default function Board() {
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <h1 className="text-base font-semibold text-gray-900">Transactions</h1>
-          <p className="mt-2 text-sm text-gray-700">
-            A table of placeholder stock market data that does not make any sense.
+          <h1 className="text-base font-semibold text-white">Transactions</h1>
+          <p className="mt-2 text-sm text-emerald-700">
+            realtime release
           </p>
-          <p>
+          <p className="text-xs text-gray-500"> 
             {data != null ? data[0].recordvalue : "Loading ..."}
           </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-          <button
+          {/* <button
             type="button"
             className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Export
-          </button>
+          </button> */}
+          <p className="block rounded-md  px-3 py-2 text-center text-sm font-semibold text-gray-500 shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+            Triomac 60
+          </p>
         </div>
       </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-            <table className="min-w-full divide-y divide-gray-300">
-              <thead>
+            <table className="min-w-full divide-y divide-gray-700 ">
+              <thead className="">
                 <tr>
                   <th
                     scope="col"
-                    className="whitespace-nowrap py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
+                    className="whitespace-nowrap py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-400 sm:pl-0"
                   >
                     Transaction ID
                   </th>
                   <th
                     scope="col"
-                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-400"
                   >
                     Company
                   </th>
                   <th
                     scope="col"
-                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-400"
                   >
                     Share
                   </th>
                   <th
                     scope="col"
-                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-400"
                   >
                     Commision
                   </th>
                   <th
                     scope="col"
-                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-400"
                   >
                     Price
                   </th>
                   <th
                     scope="col"
-                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-400"
                   >
                     Quantity
                   </th>
                   <th
                     scope="col"
-                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-400"
                   >
                     Net amount
                   </th>
@@ -143,16 +146,16 @@ export default function Board() {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 bg-white">
+              <tbody className="divide-y divide-gray-800 bg-transparent">
                 {data != null ? data.map((transaction) => (
                   <tr key={transaction.id}>
-                    <td className="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-0">{transactions[0].id}</td>
-                    <td className="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
+                    <td className="whitespace-nowrap py-1 pl-4 pr-3 text-xs text-gray-500 sm:pl-0">{transactions[0].id}</td>
+                    <td className="whitespace-nowrap px-2 py-1 text-xs font-medium text-gray-400">
                       {transaction.packetname}
                     </td>
-                    <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-900">{transactions[0].share}</td>
-                    <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-500">{transactions[0].commission}</td>
-                    <Para classe="whitespace-nowrap px-2 py-2 text-sm text-gray-500" param1={transaction.differencevalue}>
+                    <td className="whitespace-nowrap px-2 py-1 text-xs text-gray-400">{transactions[0].share}</td>
+                    <td className="whitespace-nowrap px-2 py-1 text-xs text-gray-500">{transactions[0].commission}</td>
+                    <Para classe="whitespace-nowrap px-2 py-1 text-xs text-gray-100" param1={transaction.differencevalue}>
                     {
                         transaction.recordvalue
                       }
@@ -163,12 +166,12 @@ export default function Board() {
                       }
                     </td> */}
                     {/* <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-500">{transaction.recordpercentage}</td> */}
-                    <Para classe="whitespace-nowrap px-2 py-2 text-sm text-gray-500" param1={transaction.differencevalue}>{transaction.recordpercentage}</Para>
-                    <Para classe="whitespace-nowrap px-2 py-2 text-sm text-gray-500" param1={transaction.differencevalue}>{transaction.differencevalue}</Para>
+                    <Para classe="whitespace-nowrap px-2 py-1 text-xs text-gray-100" param1={transaction.differencevalue}>{transaction.recordpercentage}</Para>
+                    <Para classe="whitespace-nowrap px-2 py-1 text-xs text-gray-100" param1={transaction.differencevalue}>{transaction.differencevalue}</Para>
                     {/* <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-500">{transaction.differencevalue}</td> */}
-                    <td className="relative whitespace-nowrap py-2 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                      <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                        Edit<span className="sr-only">, {transaction.id}</span>
+                    <td className="relative whitespace-nowrap py-1 pl-3 pr-4 text-right text-xs font-medium sm:pr-0">
+                      <a href="#" className="text-lime-600 hover:text-slate-900">
+                        active<span className="sr-only">, {transaction.id}</span>
                       </a>
                     </td>
                   </tr>
