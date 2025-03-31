@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Para } from "./para";
+import SkeletonLayout from "./skeleton";
 
 const transactions = [
   {
@@ -78,7 +79,7 @@ export default function Board() {
             realtime release
           </p>
           <p className="text-xs text-gray-500"> 
-            {data != null ? data[0].recordvalue : "Loading ..."}
+            {data != null ? data[0].recordvalue : <SkeletonLayout></SkeletonLayout>}
           </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -175,7 +176,7 @@ export default function Board() {
                       </a>
                     </td>
                   </tr>
-                )) : "Loading Datas ..."}
+                )) : <SkeletonLayout></SkeletonLayout>}
               </tbody>
             </table>
           </div>

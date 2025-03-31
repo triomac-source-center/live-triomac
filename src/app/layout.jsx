@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import '@/styles/tailwind.css'
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
+import SkeletonLayout from '@/components/skeleton'
+
 
 
 export const metadata = {
@@ -39,8 +41,9 @@ export default function RootLayout({ children }) {
       >
         <body className="flex h-screen flex-col bg-gray-900">
           <ClerkLoading>
-            <div className="fixed top-0 left-0 w-screen h-screen bg-white flex justify-center items-center">
-              <p className="text-2xl font-bold text-gray-800">Loading...</p>
+            <div className="fixed top-0 left-0 w-screen h-screen bg-gray-900 flex justify-center items-center">
+              {/* <p className="text-2xl font-bold text-gray-100">Loading...</p> */}
+               <SkeletonLayout></SkeletonLayout>
             </div>
           </ClerkLoading>
           <ClerkLoaded>

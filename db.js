@@ -10,9 +10,11 @@ if (!cached) {
 }
 
 export const connect = async () => {
+    
+    const DATABASE_URL = process.env.SIGNING_SECRET
     if (cached.conn) return cached.conn;
 
-    cached.promise = cached.promise || mongoose.connect('mongodb+srv://triomac60:F3v1K5wI0SK7c6nK@triomacdatas.hjmribt.mongodb.net/?retryWrites=true&w=majority&appName=Triomacdatas', {
+    cached.promise = cached.promise || mongoose.connect(DATABASE_URL, {
         dbName: "userauthbase",
         bufferCommands: false,
         connectTimeoutMS: 30000,
