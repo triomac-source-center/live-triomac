@@ -31,6 +31,10 @@ export async function POST(req: Request) {
   const payload = await req.json()
   const body = JSON.stringify(payload)
 
+  if (!body) {
+    throw new Error("Webhook body is empty.");
+  }
+
   let evt: WebhookEvent
 
   // Verify payload with headers
