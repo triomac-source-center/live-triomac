@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Para } from "./para";
 import SkeletonLayout from "./skeleton";
+import Link from "next/link";
 
 const transactions = [
   {
@@ -92,6 +93,11 @@ export default function Board() {
           <p className="block rounded-md  px-3 py-2 text-center text-sm font-semibold text-gray-500 shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
             Triomac 60
           </p>
+          <Link href="/realtime">
+          <p className="block rounded-sm hover:text-red-400 bg-slate-800  px-1 py-1 text-center text-xs font-semibold text-red-200 shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+            Tradingview
+          </p>
+          </Link>
         </div>
       </div>
       <div className="mt-8 flow-root">
