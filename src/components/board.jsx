@@ -57,29 +57,31 @@ export default function Board() {
         setError(err.message);
       }
 
-      
-      
+
+
     };
-    
-   
+
+
     fetchData();
 
     const interval = setInterval(fetchData, 1000); // Fetch every 1 second
     return () => clearInterval(interval);
 
   }, []);
-   
-  
- 
+
+
+
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold text-white">Transactions</h1>
-          <p className="mt-2 text-sm text-emerald-700">
-            realtime release
-          </p>
-          <p className="text-xs text-gray-500"> 
+          <Link href="triomac-pool">
+            <p className="mt-2 text-sm text-emerald-700 hover:text-gray-600">
+              realtime release
+            </p>
+          </Link>
+          <p className="text-xs text-gray-500">
             {data != null ? data[0].recordvalue : <SkeletonLayout></SkeletonLayout>}
           </p>
         </div>
@@ -94,9 +96,9 @@ export default function Board() {
             Triomac 60
           </p>
           <Link href="/realtime">
-          <p className="block rounded-sm hover:text-red-400 bg-slate-800  px-1 py-1 text-center text-xs font-semibold text-red-200 shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
-            Tradingview
-          </p>
+            <p className="block rounded-sm hover:text-red-400 bg-slate-800  px-1 py-1 text-center text-xs font-semibold text-red-200 shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+              Tradingview
+            </p>
           </Link>
         </div>
       </div>
@@ -163,7 +165,7 @@ export default function Board() {
                     <td className="whitespace-nowrap px-2 py-1 text-xs text-gray-400">{transactions[0].share}</td>
                     <td className="whitespace-nowrap px-2 py-1 text-xs text-gray-500">{transactions[0].commission}</td>
                     <Para classe="whitespace-nowrap px-2 py-1 text-xs text-gray-100" param1={transaction.differencevalue}>
-                    {
+                      {
                         transaction.recordvalue
                       }
                     </Para>

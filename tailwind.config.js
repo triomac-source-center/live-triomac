@@ -19,7 +19,7 @@ module.exports = {
       '7xl': ['4.5rem', { lineHeight: '1.1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
-    },
+    },   
     extend: {
       colors: {
 		        grayview: '#131722', 
@@ -75,6 +75,12 @@ module.exports = {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				triomen: {
+					'blue': '#3b82f6',
+					'purple': '#8b5cf6',
+					'cyan': '#06b6d4',
+					'teal': '#14b8a6'
 				}
 			},
       keyframes: {
