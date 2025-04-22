@@ -57,8 +57,6 @@ export default function Board() {
         setError(err.message);
       }
 
-
-
     };
 
 

@@ -22,7 +22,9 @@ module.exports = {
     },   
     extend: {
       colors: {
-		        grayview: '#131722', 
+		        grayview: '#131722',
+				greenmade: "#11C471",
+				success: '#16A249',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
