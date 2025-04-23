@@ -75,6 +75,16 @@
     width: 100%;
     height: 100%;
   }
+
+  .input-xs::placeholder {
+    font-size: 0.6rem; /* Example of an even smaller size */
+    color: theme('colors.gray.500');
+  }
+
+  .input-sm::placeholder {
+    font-size: 0.75rem; /* Example of a smaller size */
+    color: theme('colors.gray.400'); /* Using Tailwind's theme for color */
+  }
 }
 
 @layer utilities {

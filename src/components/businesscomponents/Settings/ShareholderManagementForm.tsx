@@ -243,10 +243,10 @@ const ShareholderManagementForm: React.FC<ShareholderManagementFormProps> = ({ o
       {/* Search and filters */}
       <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
         <div className="relative w-full sm:w-80">
-          <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-3.5 h-3 w-3 text-muted-foreground" />
           <Input
             placeholder="Search shareholders..."
-            className="pl-8 bg-grayview"
+            className="pl-8 bg-grayview text-sm input-sm"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -270,7 +270,7 @@ const ShareholderManagementForm: React.FC<ShareholderManagementFormProps> = ({ o
       {showPending && pendingShareholders.length > 0 && (
         <div>
           <h3 className="text-lg font-medium mb-4">Pending Shareholder Requests</h3>
-          <div className="rounded-md border">
+          <div className="rounded-md border border-gray-700">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -323,7 +323,7 @@ const ShareholderManagementForm: React.FC<ShareholderManagementFormProps> = ({ o
       {/* Current shareholders table */}
       <div>
         <h3 className="text-lg font-medium mb-4">Current Shareholders</h3>
-        <div className="rounded-md border">
+        <div className="rounded-md border border-gray-700">
           <Table>
             <TableHeader>
               <TableRow>
@@ -458,7 +458,7 @@ const ShareholderManagementForm: React.FC<ShareholderManagementFormProps> = ({ o
                 <FormItem>
                   <FormLabel>Shares</FormLabel>
                   <FormControl>
-                    <Input type="number" placeholder="Number of shares" {...field} />
+                    <Input className="bg-secondary/30" type="number" placeholder="Number of shares" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -473,7 +473,7 @@ const ShareholderManagementForm: React.FC<ShareholderManagementFormProps> = ({ o
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="Email address" {...field} />
+                      <Input className="bg-secondary/30" type="email" placeholder="Email address" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -487,7 +487,7 @@ const ShareholderManagementForm: React.FC<ShareholderManagementFormProps> = ({ o
                   <FormItem>
                     <FormLabel>Phone</FormLabel>
                     <FormControl>
-                      <Input placeholder="Phone number" {...field} />
+                      <Input className="bg-secondary/30" placeholder="Phone number" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

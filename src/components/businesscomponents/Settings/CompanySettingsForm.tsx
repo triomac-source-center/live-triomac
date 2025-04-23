@@ -75,7 +75,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Company name" {...field} />
+                    <Input className="bg-secondary/30" placeholder="Company name" {...field} />
                   </FormControl>
                   <FormDescription>
                     The name your business operates under.
@@ -92,7 +92,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>Legal Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Legal registered name" {...field} />
+                    <Input className="bg-secondary/30" placeholder="Legal registered name" {...field} />
                   </FormControl>
                   <FormDescription>
                     The official registered name of your company.
@@ -110,7 +110,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
               <FormItem>
                 <FormLabel>Tax ID / EIN</FormLabel>
                 <FormControl>
-                  <Input placeholder="Tax identification number" {...field} />
+                  <Input className="bg-secondary/30" placeholder="Tax identification number" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -124,9 +124,8 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
               <FormItem>
                 <FormLabel>Company Description</FormLabel>
                 <FormControl>
-                  <Textarea 
-                    placeholder="Brief description of your company" 
-                    className="min-h-24" 
+                  <Textarea className="bg-secondary/30 min-h-24"
+                    placeholder="Brief description of your company"
                     {...field} 
                   />
                 </FormControl>
@@ -148,7 +147,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
               <FormItem>
                 <FormLabel>Street Address</FormLabel>
                 <FormControl>
-                  <Input placeholder="Street address" {...field} />
+                  <Input className="bg-secondary/30" placeholder="Street address" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -163,7 +162,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>City</FormLabel>
                   <FormControl>
-                    <Input placeholder="City" {...field} />
+                    <Input className="bg-secondary/30" placeholder="City" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -177,7 +176,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>State/Province</FormLabel>
                   <FormControl>
-                    <Input placeholder="State or province" {...field} />
+                    <Input className="bg-secondary/30" placeholder="State or province" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -193,7 +192,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>ZIP/Postal Code</FormLabel>
                   <FormControl>
-                    <Input placeholder="ZIP or postal code" {...field} />
+                    <Input className="bg-secondary/30" placeholder="ZIP or postal code" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -211,8 +210,8 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a country" />
+                      <SelectTrigger className="bg-secondary/30">
+                        <SelectValue  placeholder="Select a country" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -239,7 +238,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>Phone</FormLabel>
                   <FormControl>
-                    <Input placeholder="Phone number" {...field} />
+                    <Input className="bg-secondary/30" placeholder="Phone number" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -253,7 +252,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Company email" {...field} />
+                    <Input className="bg-secondary/30" placeholder="Company email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -267,7 +266,7 @@ const CompanySettingsForm: React.FC<CompanySettingsFormProps> = ({ onSuccess }) 
                 <FormItem>
                   <FormLabel>Website</FormLabel>
                   <FormControl>
-                    <Input placeholder="Company website URL" {...field} />
+                    <Input className="bg-secondary/30" placeholder="Company website URL" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

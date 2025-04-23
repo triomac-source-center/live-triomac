@@ -45,7 +45,7 @@ const Settings: React.FC = () => {
             <Card className="bg-grayview border-gray-800">
               <CardHeader>
                 <CardTitle>Shareholder Management</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-xs">
                   Manage your shareholders, approve or reject new applications, update information.
                 </CardDescription>
               </CardHeader>
@@ -60,10 +60,10 @@ const Settings: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="shares" className="space-y-4">
-            <Card>
+            <Card className="bg-grayview border-gray-800">
               <CardHeader>
                 <CardTitle>Share Distribution</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-xs">
                   Manage your company shares, adjust distribution, and set ownership percentages.
                 </CardDescription>
               </CardHeader>
@@ -78,10 +78,10 @@ const Settings: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="company" className="space-y-4">
-            <Card>
+            <Card className="bg-grayview border-gray-800">
               <CardHeader>
                 <CardTitle>Company Settings</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-xs">
                   Update your company information, business address, and contact details.
                 </CardDescription>
               </CardHeader>
@@ -96,10 +96,10 @@ const Settings: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="notifications" className="space-y-4">
-            <Card>
+            <Card className="bg-grayview border-gray-800">
               <CardHeader>
                 <CardTitle>Notification Settings</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-xs">
                   Configure how and when you receive notifications about your business.
                 </CardDescription>
               </CardHeader>

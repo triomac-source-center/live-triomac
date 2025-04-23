@@ -58,12 +58,12 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <Card>
+        <Card className="bg-grayview border-gray-700">
           <CardContent className="pt-6">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="text-lg font-medium">Email Notifications</h3>
-                <p className="text-sm text-muted-foreground">Configure email notification preferences</p>
+                <p className="text-xs text-muted-foreground">Configure email notification preferences</p>
               </div>
               <FormField
                 control={form.control}
@@ -103,7 +103,7 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
                       disabled={!form.watch("emailNotifications")}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-secondary/30">
                           <SelectValue placeholder="Select frequency" />
                         </SelectTrigger>
                       </FormControl>
@@ -113,7 +113,7 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
                         <SelectItem value="weekly">Weekly Summary</SelectItem>
                       </SelectContent>
                     </Select>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       How often you want to receive email notifications.
                     </FormDescription>
                     <FormMessage />
@@ -133,7 +133,7 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
                       disabled={!form.watch("emailNotifications") || !form.watch("shareholderUpdates")}
                     >
                       <FormControl>
-                        <SelectTrigger>
+                        <SelectTrigger className="bg-secondary/30">
                           <SelectValue placeholder="Select threshold" />
                         </SelectTrigger>
                       </FormControl>
@@ -144,7 +144,7 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
                         <SelectItem value="10">Changes ≥ 10%</SelectItem>
                       </SelectContent>
                     </Select>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       Minimum percentage change to trigger shareholder update notifications.
                     </FormDescription>
                     <FormMessage />
@@ -158,14 +158,14 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Notification Categories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField
+            <FormField 
               control={form.control}
               name="shareholderUpdates"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4 border-gray-700">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Shareholder Updates</FormLabel>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       Receive notifications when shareholder information changes.
                     </FormDescription>
                   </div>
@@ -184,10 +184,10 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
               control={form.control}
               name="financialAlerts"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4 border-gray-700">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Financial Alerts</FormLabel>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       Get notified about important financial events.
                     </FormDescription>
                   </div>
@@ -206,10 +206,10 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
               control={form.control}
               name="meetingReminders"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4 border-gray-700">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Meeting Reminders</FormLabel>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       Receive reminders about upcoming shareholder meetings.
                     </FormDescription>
                   </div>
@@ -228,10 +228,10 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
               control={form.control}
               name="documentUploads"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4 border-gray-700">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Document Uploads</FormLabel>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       Get notified when new documents are uploaded.
                     </FormDescription>
                   </div>
@@ -250,10 +250,10 @@ const NotificationSettingsForm: React.FC<NotificationSettingsFormProps> = ({ onS
               control={form.control}
               name="marketUpdates"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4 border-gray-700">
                   <div className="space-y-0.5">
                     <FormLabel className="text-base">Market Updates</FormLabel>
-                    <FormDescription>
+                    <FormDescription className="text-xs">
                       Receive industry and market trend updates.
                     </FormDescription>
                   </div>

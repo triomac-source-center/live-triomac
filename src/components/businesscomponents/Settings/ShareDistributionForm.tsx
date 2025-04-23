@@ -237,7 +237,7 @@ const ShareDistributionForm: React.FC<ShareDistributionFormProps> = ({ onSuccess
   return (
     <div className="space-y-8">
       {/* Total shares allocation */}
-      <Card>
+      <Card className="bg-secondary/30 border-gray-800">
         <CardContent className="pt-6">
           <Form {...allocationForm}>
             <form onSubmit={allocationForm.handleSubmit(updateTotalShares)} className="space-y-4">
@@ -249,7 +249,7 @@ const ShareDistributionForm: React.FC<ShareDistributionFormProps> = ({ onSuccess
                     <FormItem className="flex-1">
                       <FormLabel>Total Company Shares</FormLabel>
                       <FormControl>
-                        <Input type="number" placeholder="Total shares" {...field} />
+                        <Input className="bg-grayview" type="number" placeholder="Total shares" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -275,7 +275,7 @@ const ShareDistributionForm: React.FC<ShareDistributionFormProps> = ({ onSuccess
           </Badge>
         </div>
         
-        <div className="rounded-md border">
+        <div className="rounded-md border border-gray-700">
           <Table>
             <TableHeader>
               <TableRow>
@@ -368,7 +368,7 @@ const ShareDistributionForm: React.FC<ShareDistributionFormProps> = ({ onSuccess
                   <FormItem>
                     <FormLabel>Class Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g. Common Stock (Class A)" {...field} />
+                      <Input className="bg-secondary/30" placeholder="e.g. Common Stock (Class A)" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -382,7 +382,7 @@ const ShareDistributionForm: React.FC<ShareDistributionFormProps> = ({ onSuccess
                   <FormItem>
                     <FormLabel>Number of Shares</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="Enter number of shares" {...field} />
+                      <Input className="bg-secondary/30" type="number" placeholder="Enter number of shares" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -422,7 +422,7 @@ const ShareDistributionForm: React.FC<ShareDistributionFormProps> = ({ onSuccess
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
-                    <Input placeholder="Optional description" {...field} />
+                    <Input className="bg-secondary/30" placeholder="Optional description" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -333,8 +333,8 @@ const ShareholdersPage: React.FC = () => {
     <MainLayout>
       <div className="space-y-6">
         <div className="flex flex-col space-y-2">
-          <h1 className="text-3xl font-bold tracking-tight">Shareholders</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-300">Shareholders</h1>
+          <p className="text-muted-foreground text-xs">
             Manage and view details about your business shareholders, equity distribution, and corporate governance.
           </p>
         </div>
